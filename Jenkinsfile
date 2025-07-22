@@ -57,7 +57,7 @@ spec:
 
     stage('Update Image in Manifests') {
       steps {
-        container('kaniko') {
+        container('kubectl') {
           dir('manifests') {
             sh '''
               ls -l

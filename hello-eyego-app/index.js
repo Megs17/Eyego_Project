@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // API Route
-app.get('/api/hello', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ message: 'Hello Eyego2' });
 });
 

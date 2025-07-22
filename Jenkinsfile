@@ -15,9 +15,9 @@ spec:
       args:
         - "9999999"
     - name: kubectl
-        image: alpine/k8s:1.26.10
-        command: ["sleep"]
-        args: ["infinity"]
+      image: alpine/k8s:1.26.10
+      command: ["sleep"]
+      args: ["infinity"]
     
 """
   }

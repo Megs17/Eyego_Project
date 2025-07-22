@@ -1,0 +1,11 @@
+hello-eyego-app/node_modules/
+hello-eyego-app/.env
+infra_terraform_code/.terraform/
+infra_terraform_code/.terraform.lock.hcl
+infra_terraform_code/terraform.tfstate
+infra_terraform_code/terraform.tfstate.backup
+infra_terraform_code/*.tfvars
+infra_terraform_code/*.tfplan
+infra_terraform_code/crash.log
+infra_terraform_code/override.tf
+infra_terraform_code/override.tf.json

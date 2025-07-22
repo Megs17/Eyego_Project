@@ -14,14 +14,14 @@ spec:
     - sleep
     args:
     - "9999999"
-- name: kubectl
-    image: bitnami/kubectl:1.28
-    command:
-    - /bin/sh
-    args:
-    - -c
-    - "cat"
-    tty: true
+  - name: kubectl
+        image: bitnami/kubectl:1.28
+        command:
+        - /bin/sh
+        args:
+        - -c
+        - "cat"
+        tty: true
 """
     }
   }

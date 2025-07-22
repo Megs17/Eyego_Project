@@ -15,7 +15,7 @@ spec:
     args:
     - "9999999"
   - name: kubectl
-    image: bitnami/kubectl:latest
+    image: lachlanevenson/k8s-kubectl:v1.29.0
     command:
     - sleep
     args:

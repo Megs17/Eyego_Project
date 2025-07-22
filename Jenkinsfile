@@ -15,13 +15,10 @@ spec:
       args:
         - "9999999"
     - name: kubectl
-      image: bitnami/kubectl:1.28
-      command:
-        - /bin/sh
-      args:
-        - -c
-        - "cat"
-      tty: true
+        image: alpine/k8s:1.26.10
+        command: ["sleep"]
+        args: ["infinity"]
+    
 """
   }
 }

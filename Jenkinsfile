@@ -1,30 +1,30 @@
 pipeline {
-  agent {
-    kubernetes {
-      yaml """
+agent {
+  kubernetes {
+    yaml """
 apiVersion: v1
 kind: Pod
 spec:
   serviceAccountName: ecr-access-sa
   containers:
-  - name: kaniko
-    image: gcr.io/kaniko-project/executor:debug
-    imagePullPolicy: Always
-    command:
-    - sleep
-    args:
-    - "9999999"
-  - name: kubectl
-        image: bitnami/kubectl:1.28
-        command:
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:debug
+      imagePullPolicy: Always
+      command:
+        - sleep
+      args:
+        - "9999999"
+    - name: kubectl
+      image: bitnami/kubectl:1.28
+      command:
         - /bin/sh
-        args:
+      args:
         - -c
         - "cat"
-        tty: true
+      tty: true
 """
-    }
   }
+}
 
   environment {
     AWS_ACCOUNT_ID = "020737256003"

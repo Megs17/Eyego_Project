@@ -60,6 +60,7 @@ spec:
         container('kaniko') {
           dir('manifests') {
             sh '''
+              ls -l
               sed -i "s|image: .*|image: ${FULL_IMAGE}|" app-deployment.yaml
             '''
           }

@@ -3,8 +3,14 @@ kind: Ingress
 metadata:
   name: eyego-ingress
   namespace: jenkins
+  annotations:
+   cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - helloapp.zapto.org
+      secretName: myapp-tls  
   rules:
     - host: helloapp.zapto.org
       http:

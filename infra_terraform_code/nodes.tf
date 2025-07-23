@@ -49,8 +49,6 @@ resource "aws_iam_role_policy_attachment" "amazon_eks_worker_node_policy" {
 
 # AWS updated this policy to support the EKS Pod Identity feature (2024+), which allows pods to assume IAM roles more securely without needing kube2iam or IRSA complexity.
 
-# 🔹 So, this policy supports newer EKS setups where pods assume roles directly using the Pod Identity Agent.
-## explain of the pod identity agent in other file
 
 resource "aws_iam_role_policy_attachment" "amazon_eks_cni_policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"

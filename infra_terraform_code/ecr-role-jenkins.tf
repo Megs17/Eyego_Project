@@ -1,4 +1,4 @@
-# must be created by oicd method
+# must be created by OIDC method
 data "aws_iam_policy_document" "service-account-policy-ecr" {
    statement {
     actions = ["sts:AssumeRoleWithWebIdentity"]

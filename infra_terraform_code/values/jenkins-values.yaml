@@ -3,16 +3,27 @@ persistence:
   storageClass: "ebs-sc"
   size: 5Gi
 
-
-
-
 controller:
-  serviceType: LoadBalancer
-  servicePort: 8080
+  serviceType: ClusterIP
   admin:
     username: admin
     password: admin
-  
+    
+  ingress:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /
+      hostName: jenkins.zapto.org
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: jenkins
+              port:
+                number: 8080
+        
   installPlugins:
     - git
     - github
@@ -20,7 +31,6 @@ controller:
     - github-branch-source
     - docker-workflow
     - kubernetes
-    # Default recommended plugins
     - configuration-as-code
     - workflow-aggregator
     - credentials-binding

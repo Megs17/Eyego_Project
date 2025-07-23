@@ -8,6 +8,8 @@ resource "helm_release" "jenkins" {
   version = "5.8.49"
 
   values = [file("${path.module}/values/jenkins-values.yaml")]
+
+
   
   depends_on = [ aws_eks_addon.ebs_csi_driver ]
 }

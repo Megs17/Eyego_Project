@@ -11,5 +11,6 @@ resource "helm_release" "jenkins" {
 
 
   
-  depends_on = [ aws_eks_addon.ebs_csi_driver ]
+  depends_on = [ aws_eks_addon.ebs_csi_driver,
+  kubernetes_manifest.letsencrypt_prod_issuer ]
 }

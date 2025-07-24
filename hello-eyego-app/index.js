@@ -3,7 +3,7 @@ const app = express();
 
 // API Route
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello Eyego2' });
+  res.json({ message: 'Hello Eyego' });
 });
 
 // Start the server

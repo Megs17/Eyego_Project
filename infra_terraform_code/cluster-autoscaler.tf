@@ -76,6 +76,10 @@ resource "helm_release" "cluster_autoscaler" {
   chart      = "cluster-autoscaler"
   namespace  = "kube-system"
   version    = "9.46.0"
+  atomic           = true
+  cleanup_on_fail  = true
+  timeout          = 600  # 10 minutes
+  max_history      = 5    # Keep some history for rollback
 ## pass service account name to the chart
 set = [
     {

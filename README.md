@@ -185,6 +185,13 @@ Eyego_Project/
 - [Jenkins](https://www.jenkins.io/)
 
 ---
+# Live Demo Links
+
+- [Jenkins Dashboard](https://jenkins.zapto.org/) (username:admin  password:admin)
+- [Hello Eyego App](https://helloapp.zapto.org/)
+
+> **Note:** These services are hosted on the AWS Free Tier and may be temporarily unavailable if AWS suspends them due to free tier usage limits. 
+> If the links are down, please check the recorded video demonstration instead.
 
 ## 📬 Contact
 
